@@ -1,19 +1,92 @@
-# Mottainai Pantry Web
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy | Mottainai Pantry</title>
+  <meta name="description" content="Mottainai Pantry のプライバシーポリシーです。">
+  <meta property="og:title" content="Privacy Policy | Mottainai Pantry">
+  <meta property="og:description" content="Mottainai Pantry のプライバシーポリシーです。">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">
+        <img src="images/app_icon.png" alt="" aria-hidden="true">
+        <span>Mottainai Pantry</span>
+      </a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="download.html">Download</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="support.html">Support</a>
+        <a href="faq.html">FAQ</a>
+        <a href="changelog.html">Changelog</a>
+      </nav>
+    </div>
+  </header>
 
-GitHub Pages 用の静的サイト一式です。
+  <main>
+    <div class="logo-block">
+      <img src="images/app_logo.png" alt="Mottainai Pantry">
+    </div>
 
-## Files
+    <h1 class="page-title">プライバシーポリシー</h1>
+    <p class="note">最終更新日：2026年6月29日</p>
 
-- index.html
-- about.html
-- privacy.html
-- terms.html
-- support.html
-- faq.html
-- download.html
-- changelog.html
-- style.css
+    <section class="card">
+      <h2>1. 保存される情報</h2>
+      <p>本アプリでは、食材情報、レシピ情報、履歴、統計、各種設定、通知設定、AI利用設定を端末内に保存します。これらの情報は原則としてサーバーへ送信されません。</p>
+    </section>
 
-## Deploy
+    <section class="card">
+      <h2>2. AI APIキー</h2>
+      <p>AI機能を利用する場合、利用者自身が取得したOpenAIまたはGoogle GeminiのAPIキーを使用します。</p>
+      <p>APIキーはAndroid Keystoreを利用して端末内に暗号化保存されます。開発者がAPIキーを取得・閲覧・保存することはありません。</p>
+    </section>
 
-GitHub Pages で `main` branch / root を公開対象に設定してください。
+    <section class="card">
+      <h2>3. 外部サービスへの送信</h2>
+      <p>AIレシピ生成時には、食材名やレシピ生成に必要な入力内容がOpenAIまたはGoogle Geminiへ送信される場合があります。</p>
+      <p>各サービスの利用規約およびプライバシーポリシーは、それぞれの提供元に従います。</p>
+    </section>
+
+    <section class="card">
+      <h2>4. 収集しない情報</h2>
+      <ul>
+        <li>氏名</li>
+        <li>電話番号</li>
+        <li>位置情報</li>
+        <li>連絡先</li>
+        <li>広告ID</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>5. バックアップ</h2>
+      <p>CSVやJSONバックアップファイルは利用者自身の責任で管理してください。</p>
+    </section>
+
+    <section class="card">
+      <h2>6. 広告・課金</h2>
+      <p>現在、本アプリでは広告を表示していません。SupporterおよびPremiumは将来的に提供予定です。</p>
+    </section>
+
+    <section class="card">
+      <h2>7. お問い合わせ</h2>
+      <p><a href="mailto:meke625@gmail.com">meke625@gmail.com</a></p>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      © 2026 Mottainai Project. Mottainai Pantry is currently in pre-release alpha testing.
+    </div>
+  </footer>
+</body>
+</html>

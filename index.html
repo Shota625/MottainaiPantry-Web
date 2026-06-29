@@ -3,16 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home | Mottainai Pantry</title>
-  <meta name="description" content="家庭の食品ロスを減らすAndroid向け食材管理アプリ Mottainai Pantry の公式サイトです。">
+  <title>FAQ | Mottainai Pantry</title>
+  <meta name="description" content="Mottainai Pantry のよくある質問です。">
+  <meta property="og:title" content="FAQ | Mottainai Pantry">
+  <meta property="og:description" content="Mottainai Pantry のよくある質問です。">
+  <meta property="og:type" content="website">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header class="site-header">
     <div class="header-inner">
-      <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"></span><span>Mottainai Pantry</span></a>
+      <a class="brand" href="index.html">
+        <img src="images/app_icon.png" alt="" aria-hidden="true">
+        <span>Mottainai Pantry</span>
+      </a>
       <nav class="nav" aria-label="Primary navigation">
         <a href="index.html">Home</a>
+        <a href="about.html">About</a>
         <a href="download.html">Download</a>
         <a href="privacy.html">Privacy</a>
         <a href="terms.html">Terms</a>
@@ -24,47 +31,36 @@
   </header>
 
   <main>
-    <section class="hero">
-      <div class="hero-card">
-        <span class="badge">Android app</span>
-        <h1>食材を最後まで、美味しく。</h1>
-        <p class="lead">Mottainai Pantry は、家庭の食品ロスを減らすための食材管理アプリです。</p>
-        <div class="button-row">
-          <a class="button" href="download.html">ダウンロード情報を見る</a>
-          <a class="button secondary" href="privacy.html">プライバシーポリシー</a>
-        </div>
-      </div>
-      <div class="hero-visual">
-        <span class="badge">Mottainai Project</span>
-        <strong>毎日の「もったいない」を少しずつ減らす。</strong>
-        <p>期限管理、バーコード、OCR、AIレシピ提案で食材を使い切る習慣を支援します。</p>
-      </div>
-    </section>
+    <div class="logo-block">
+      <img src="images/app_logo.png" alt="Mottainai Pantry">
+    </div>
 
-    <section class="grid">
-      <div class="card">
-        <h2>食材管理</h2>
-        <p>食材の登録、編集、消費、廃棄、復元をまとめて管理できます。</p>
-      </div>
-      <div class="card">
-        <h2>AIレシピ提案</h2>
-        <p>登録した食材をもとに、AIが家庭向けのレシピ案を提案します。</p>
-      </div>
-      <div class="card">
-        <h2>CSV対応</h2>
-        <p>CSVインポート・エクスポートにより、データ管理やバックアップを支援します。</p>
-      </div>
-    </section>
+    <h1 class="page-title">よくある質問</h1>
 
     <section class="card">
-      <h2>AI機能について</h2>
-      <p>AIレシピ提案を利用する場合は、ご自身で取得したOpenAIまたはGoogle Gemini APIキーが必要です。</p>
-      <p>APIキーはAndroid Keystoreを利用して端末内に暗号化保存され、開発者が取得することはありません。</p>
-    </section>
+      <h2>Q. 何のアプリですか？</h2>
+      <p>家庭内の食材を管理し、食品ロスを減らすことを目的としたAndroidアプリです。</p>
 
-    <section class="card">
-      <h2>Mottainai Project</h2>
-      <p>「世の中の“もったいない”を減らす」ことをテーマに、日々の暮らしを少し良くするアプリを開発しています。</p>
+      <h2>Q. AI機能を使うには何が必要ですか？</h2>
+      <p>OpenAIまたはGoogle GeminiのAPIキーが必要です。APIキーは利用者自身で取得してください。</p>
+
+      <h2>Q. APIキーは安全ですか？</h2>
+      <p>Android Keystoreを利用して端末内に暗号化保存されます。開発者がAPIキーを取得することはありません。</p>
+
+      <h2>Q. AI利用料金は誰が負担しますか？</h2>
+      <p>各AIサービスの料金体系に従い、利用者自身の負担となります。</p>
+
+      <h2>Q. データはクラウドに保存されますか？</h2>
+      <p>原則として端末内に保存されます。クラウド同期は現在提供していません。</p>
+
+      <h2>Q. 機種変更時はどうすればよいですか？</h2>
+      <p>CSVエクスポートやバックアップ機能をご利用ください。</p>
+
+      <h2>Q. iPhone版はありますか？</h2>
+      <p>現在はAndroid版のみです。iOS版は将来的に検討予定です。</p>
+
+      <h2>Q. Supporter / Premiumとは何ですか？</h2>
+      <p>将来的に提供予定の応援・サブスクリプション機能です。現在はBilling未実装です。</p>
     </section>
 
   </main>

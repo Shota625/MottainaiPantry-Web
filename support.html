@@ -1,60 +1,370 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Support | Mottainai Pantry</title>
-  <meta name="description" content="Mottainai Pantry のサポートページです。">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header class="site-header">
-    <div class="header-inner">
-      <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"></span><span>Mottainai Pantry</span></a>
-      <nav class="nav" aria-label="Primary navigation">
-        <a href="index.html">Home</a>
-        <a href="download.html">Download</a>
-        <a href="privacy.html">Privacy</a>
-        <a href="terms.html">Terms</a>
-        <a href="support.html">Support</a>
-        <a href="faq.html">FAQ</a>
-        <a href="changelog.html">Changelog</a>
-      </nav>
-    </div>
-  </header>
+/* style.css */
+:root {
+  --primary: #69C27D;
+  --primary-dark: #2F7A46;
+  --accent: #F7B955;
+  --danger: #EF6A6A;
+  --info: #4CA5F5;
+  --text: #2F3437;
+  --muted: #6B7280;
+  --bg: #FAFCFA;
+  --card: #FFFFFF;
+  --border: #E5EFE7;
+  --soft: #EEF8F0;
+  --shadow: 0 10px 30px rgba(47, 52, 55, 0.08);
+}
 
-  <main>
-    <h1 class="page-title">Support</h1>
-    <p class="lead">不具合報告、ご要望、お問い合わせは以下までお願いいたします。</p>
+* { box-sizing: border-box; }
 
-    <section class="card">
-      <h2>お問い合わせ</h2>
-      <p><a href="mailto:meke625@gmail.com">meke625@gmail.com</a></p>
-    </section>
+html { scroll-behavior: smooth; }
 
-    <div class="warning">
-      <strong>お願い</strong>
-      <p>APIキー、パスワード、個人情報はメールに記載しないでください。</p>
-    </div>
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans JP", sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at top left, rgba(105, 194, 125, 0.16), transparent 34rem),
+    radial-gradient(circle at top right, rgba(247, 185, 85, 0.18), transparent 30rem),
+    var(--bg);
+  line-height: 1.8;
+}
 
-    <section class="card">
-      <h2>不具合報告時にあると助かる情報</h2>
-      <ul>
-        <li>利用端末</li>
-        <li>Androidバージョン</li>
-        <li>アプリバージョン</li>
-        <li>発生した画面</li>
-        <li>再現手順</li>
-        <li>スクリーンショットの有無</li>
-      </ul>
-    </section>
+a { color: var(--primary-dark); font-weight: 700; }
 
-  </main>
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border);
+}
 
-  <footer class="site-footer">
-    <div class="footer-inner">
-      © 2026 Mottainai Project. Mottainai Pantry is currently in pre-release alpha testing.
-    </div>
-  </footer>
-</body>
-</html>
+.header-inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 900;
+  letter-spacing: 0.01em;
+}
+
+.brand img {
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 14px;
+}
+
+.nav a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.nav a:hover { color: var(--primary-dark); }
+
+main {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 42px 24px 64px;
+}
+
+.hero {
+  padding: 48px 0 42px;
+  display: grid;
+  grid-template-columns: 1.12fr 0.88fr;
+  gap: 32px;
+  align-items: center;
+}
+
+.hero-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 28px;
+  padding: 34px;
+  box-shadow: var(--shadow);
+}
+
+.hero-logo {
+  max-width: 520px;
+  width: min(100%, 520px);
+  height: auto;
+  display: block;
+  margin-bottom: 18px;
+}
+
+.hero-visual {
+  min-height: 360px;
+  border-radius: 28px;
+  background: linear-gradient(145deg, rgba(105, 194, 125, 0.95), rgba(247, 185, 85, 0.9));
+  box-shadow: var(--shadow);
+  color: white;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hero-visual img {
+  width: 150px;
+  height: 150px;
+  border-radius: 34px;
+  background: white;
+  align-self: flex-end;
+  box-shadow: 0 16px 32px rgba(47, 52, 55, 0.18);
+}
+
+.hero-visual strong {
+  font-size: 28px;
+  line-height: 1.25;
+  display: block;
+}
+
+.badge {
+  display: inline-block;
+  background: #EAF7EE;
+  color: var(--primary-dark);
+  padding: 5px 13px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+}
+
+h1 {
+  margin: 16px 0 10px;
+  font-size: clamp(32px, 5vw, 54px);
+  line-height: 1.18;
+  color: var(--text);
+}
+
+.page-title { color: var(--primary-dark); }
+
+h2 {
+  margin-top: 34px;
+  color: var(--primary-dark);
+  font-size: 26px;
+  line-height: 1.35;
+}
+
+h3 {
+  margin-top: 24px;
+  font-size: 20px;
+}
+
+.lead {
+  color: var(--muted);
+  font-size: 18px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  padding: 26px;
+  margin: 22px 0;
+  box-shadow: 0 6px 20px rgba(47, 52, 55, 0.05);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.feature-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 22px;
+  box-shadow: 0 6px 20px rgba(47, 52, 55, 0.05);
+}
+
+.feature-card .icon {
+  font-size: 30px;
+}
+
+.screenshot-section {
+  margin-top: 42px;
+}
+
+.screenshot-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.screenshot-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  padding: 14px;
+  box-shadow: var(--shadow);
+}
+
+.screenshot-card img {
+  width: 100%;
+  display: block;
+  border-radius: 16px;
+}
+
+.screenshot-card p {
+  color: var(--muted);
+  font-size: 14px;
+  margin: 10px 4px 0;
+  text-align: center;
+}
+
+.logo-block {
+  text-align: center;
+  margin: 18px 0 28px;
+}
+
+.logo-block img {
+  max-width: 520px;
+  width: min(100%, 520px);
+  height: auto;
+}
+
+.app-icon {
+  width: 112px;
+  height: 112px;
+  border-radius: 26px;
+  box-shadow: var(--shadow);
+}
+
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.button {
+  display: inline-block;
+  background: var(--primary);
+  color: white;
+  padding: 12px 20px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 900;
+  box-shadow: 0 8px 20px rgba(105, 194, 125, 0.28);
+}
+
+.button.secondary {
+  background: white;
+  color: var(--primary-dark);
+  border: 1px solid var(--border);
+  box-shadow: none;
+}
+
+.warning {
+  color: #7C4A03;
+  background: #FFF7E6;
+  border: 1px solid #FAD79B;
+  padding: 18px;
+  border-radius: 16px;
+}
+
+.note {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+ul { padding-left: 1.3rem; }
+li { margin: 0.3rem 0; }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--card);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+th, td {
+  border: 1px solid var(--border);
+  padding: 12px;
+  text-align: left;
+}
+
+th { background: #F0FAF3; }
+
+.site-footer {
+  border-top: 1px solid var(--border);
+  background: var(--card);
+}
+
+.footer-inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 26px 24px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+@media (max-width: 960px) {
+  .hero {
+    grid-template-columns: 1fr;
+    padding-top: 28px;
+  }
+
+  .feature-grid,
+  .screenshot-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .header-inner {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .nav { justify-content: flex-start; }
+
+  .hero-card,
+  .hero-visual {
+    border-radius: 22px;
+    padding: 24px;
+  }
+
+  .grid,
+  .feature-grid,
+  .screenshot-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .screenshot-card {
+    max-width: 360px;
+    margin: 0 auto;
+  }
+
+  main {
+    padding: 28px 18px 50px;
+  }
+}
