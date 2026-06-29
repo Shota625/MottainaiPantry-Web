@@ -1,120 +1,58 @@
-# 🍽️ Mottainai Pantry
+# Mottainai Pantry Web
 
 <p align="center">
-  <img src="images/app_logo.png" alt="Mottainai Pantry" width="520">
+  <img src="images/app_logo.png" width="520" alt="Mottainai Pantry">
 </p>
 
-<p align="center">
-食品ロスを減らすためのシンプルで使いやすいAndroidアプリ
-</p>
+Mottainai Pantry の公式Webサイトです。
 
----
+家庭の食品ロスを減らすための Android アプリ「Mottainai Pantry」の紹介、プライバシーポリシー、利用規約、サポート情報を掲載します。
 
-## 📱 アプリ概要
+## Website
 
-**Mottainai Pantry** は、家庭内の食材を管理し、賞味期限切れや食品ロスを減らすことを目的としたアプリです。
+GitHub Pages:
 
-日々の「もったいない」を少しずつ減らし、
+https://shota625.github.io/MottainaiPantry-Web/
 
-> **「食材を最後までおいしく使い切る」**
+## Pages
 
-そんな暮らしをサポートします。
+- [Home](index.html)
+- [About](about.html)
+- [Download](download.html)
+- [Privacy Policy](privacy.html)
+- [Terms](terms.html)
+- [Support](support.html)
+- [FAQ](faq.html)
+- [Changelog](changelog.html)
 
----
+## Screenshots
 
-## ✨ 主な機能
-
-- 🥬 食材管理
-- 📅 賞味期限・消費期限管理
-- 📷 賞味期限撮影（OCR）
-- 📦 バーコード登録
-- 🤖 AIレシピ提案（OpenAI / Gemini）
-- 📊 フードロス統計
-- ⭐ お気に入りレシピ
-- 💾 CSVバックアップ・復元
-- 🔒 Android KeystoreによるAPIキー暗号化保存
-
----
-
-# 📷 スクリーンショット
-
-|オンボーディング|ホーム|
+| Onboarding | Home |
 |---|---|
-|<img src="images/screenshot01_onboarding.png" width="260">|<img src="images/screenshot02_home.png" width="260">|
+| <img src="images/screenshot01_onboarding.png" width="220" alt="Onboarding"> | <img src="images/screenshot02_home.png" width="220" alt="Home"> |
 
-|AIレシピ提案|統計|
+| AI Recipe | Statistics |
 |---|---|
-|<img src="images/screenshot03_ai_recipe.png" width="260">|<img src="images/screenshot04_statistics.png" width="260">|
+| <img src="images/screenshot03_ai_recipe.png" width="220" alt="AI Recipe"> | <img src="images/screenshot04_statistics.png" width="220" alt="Statistics"> |
 
----
+## Assets
 
-# 🔒 プライバシー
+- `images/app_logo.png`
+- `images/app_icon.png`
+- `images/screenshot01_onboarding.png`
+- `images/screenshot02_home.png`
+- `images/screenshot03_ai_recipe.png`
+- `images/screenshot04_statistics.png`
 
-AI機能を利用する場合は、
+## Status
 
-**ユーザー自身が取得したAPIキー**
+現在は公開前αテスト中です。
 
-を設定画面から登録します。
+- Android版を先行開発中
+- iOS版は将来的に検討予定
+- Google Play Billingは未実装
+- Supporter / Premium は今後対応予定
 
-APIキーは
+## License
 
-- Android Keystore
-- AES-GCM
-
-により端末内へ暗号化保存されます。
-
-開発者がAPIキーや食材情報を収集することはありません。
-
----
-
-# 📄 各種ページ
-
-- 🏠 Home
-  - https://shota625.github.io/MottainaiPantry-Web/
-
-- 📖 About
-  - https://shota625.github.io/MottainaiPantry-Web/about.html
-
-- 🔒 Privacy Policy
-  - https://shota625.github.io/MottainaiPantry-Web/privacy.html
-
-- 📜 Terms of Service
-  - https://shota625.github.io/MottainaiPantry-Web/terms.html
-
-- ❓ FAQ
-  - https://shota625.github.io/MottainaiPantry-Web/faq.html
-
-- 💬 Support
-  - https://shota625.github.io/MottainaiPantry-Web/support.html
-
-- 📥 Download
-  - https://shota625.github.io/MottainaiPantry-Web/download.html
-
-- 📝 Changelog
-  - https://shota625.github.io/MottainaiPantry-Web/changelog.html
-
----
-
-# 🚀 Google Play
-
-現在公開準備中です。
-
-公開後はこちらへ掲載予定です。
-
-Coming Soon...
-
----
-
-# 📧 Contact
-
-ご意見・ご要望・不具合報告は
-
-Supportページよりお願いいたします。
-
----
-
-# © License
-
-Copyright © 2026 Mottainai Pantry
-
-All Rights Reserved.
+Personal Project
