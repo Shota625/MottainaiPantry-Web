@@ -8,7 +8,7 @@
 ファイル名
 
 ```text
-screenshot_01_onboarding.jpg
+screenshot_01_onboarding.png
 ```
 
 タイトル
@@ -31,7 +31,7 @@ screenshot_01_onboarding.jpg
 ファイル名
 
 ```text
-screenshot_02_home.jpg
+screenshot_02_home.png
 ```
 
 タイトル
@@ -54,7 +54,7 @@ screenshot_02_home.jpg
 ファイル名
 
 ```text
-screenshot_03_recipe.jpg
+screenshot_03_recipe.png
 ```
 
 タイトル
@@ -79,7 +79,7 @@ ChatGPT・Geminiで簡単提案。
 ファイル名
 
 ```text
-screenshot_04_statistics.jpg
+screenshot_04_statistics.png
 ```
 
 タイトル
