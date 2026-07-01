@@ -446,18 +446,33 @@ hr {
 .footer-nav {
   display: flex;
   flex-wrap: wrap;
-  gap: 16px;
-  margin-bottom: 16px;
+  align-items: center;
+  gap: 8px 12px;
+  margin-top: 16px;
 }
 
 .footer-nav a {
   font-size: 14px;
 }
 
+.footer-sep {
+  color: var(--border);
+  user-select: none;
+}
+
 .footer-tagline {
   color: var(--brown);
   font-weight: 700;
   margin: 0 0 8px;
+}
+
+.footer-motto {
+  margin: 0 0 8px;
+}
+
+.footer-note {
+  margin: 0;
+  font-size: 13px;
 }
 
 @media (max-width: 960px) {
