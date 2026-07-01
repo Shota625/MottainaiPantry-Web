@@ -291,13 +291,25 @@ h3 {
   padding: 24px;
 }
 
-.feature-card .icon,
-.character-card .char-icon {
+.character-card {
+  text-align: center;
+}
+
+.character-image {
+  width: 160px;
+  max-width: 100%;
+  height: auto;
+  max-height: 200px;
+  object-fit: contain;
+  margin: 0 auto 16px;
+  display: block;
+}
+
+.feature-card .icon {
   font-size: 32px;
   line-height: 1;
   margin-bottom: 8px;
 }
-
 .character-card .role {
   color: var(--accent);
   font-size: 14px;
