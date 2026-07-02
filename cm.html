@@ -45,7 +45,7 @@
 
     .cm-shell {
       display: grid;
-      grid-template-columns: minmax(0, 1fr) 330px;
+      grid-template-columns: 1fr;
       gap: 24px;
       align-items: start;
     }
@@ -54,7 +54,8 @@
       position: relative;
       overflow: hidden;
       aspect-ratio: 16 / 9;
-      min-height: 420px;
+      min-height: 600px;
+      max-height: 760px;
       border: 1px solid var(--cm-line);
       border-radius: 8px;
       background:
@@ -125,7 +126,7 @@
     .cm-title {
       margin: 10px 0 0;
       color: var(--cm-deep-green);
-      font-size: clamp(34px, 6vw, 78px);
+      font-size: clamp(32px, 5.2vw, 66px);
       font-weight: 950;
       line-height: 1.04;
       letter-spacing: 0;
@@ -141,7 +142,7 @@
     }
 
     .cm-logo-lockup {
-      width: min(64%, 560px);
+      width: min(58%, 520px);
       display: grid;
       justify-items: center;
       text-align: center;
@@ -278,13 +279,13 @@
       align-items: end;
       justify-content: center;
       gap: clamp(4px, 1.2vw, 16px);
-      min-height: clamp(170px, 28vw, 290px);
+      min-height: clamp(170px, 24vw, 260px);
       margin-top: clamp(18px, 3vw, 34px);
     }
 
     .cm-character {
       position: relative;
-      width: clamp(92px, 13vw, 154px);
+      width: clamp(84px, 11vw, 136px);
       transform-origin: 50% 100%;
       animation: cmCharacterRise var(--cm-time) linear infinite both;
     }
@@ -366,7 +367,7 @@
 
     .ring-team {
       position: relative;
-      width: min(60vw, 500px);
+      width: min(52vw, 440px);
       aspect-ratio: 1;
       margin: 26px auto 0;
       border-radius: 50%;
@@ -379,7 +380,7 @@
 
     .ring-team .cm-character {
       position: absolute;
-      width: clamp(70px, 11vw, 118px);
+      width: clamp(64px, 9vw, 104px);
       margin: 0;
       animation-name: cmRingCharacter;
     }
@@ -484,6 +485,8 @@
     }
 
     .cm-controls {
+      width: min(100%, 960px);
+      margin: 0 auto;
       display: grid;
       gap: 14px;
       border: 1px solid var(--cm-line);
@@ -665,43 +668,47 @@
       }
 
       .cm-stage {
-        min-height: auto;
+        min-height: 560px;
       }
     }
 
     @media (max-width: 760px) {
       .cm-page {
-        padding-inline: 14px;
+        padding-inline: 12px;
+        padding-top: 26px;
       }
 
       .cm-stage {
         aspect-ratio: 9 / 16;
-        min-height: 640px;
+        min-height: 660px;
+        max-height: none;
+        border-radius: 12px;
       }
 
       .cm-scene {
-        padding: 28px 18px;
+        padding: 24px 16px 28px;
+        align-items: center;
       }
 
       .cm-logo-lockup {
-        width: min(92%, 420px);
+        width: min(88%, 360px);
       }
 
       .cm-world,
       .pantry-scene {
         grid-template-columns: 1fr;
-        gap: 14px;
+        gap: 12px;
         text-align: center;
       }
 
       .cm-globe {
-        width: min(68vw, 244px);
-        border-width: 8px;
+        width: min(62vw, 220px);
+        border-width: 7px;
       }
 
       .waste-token {
-        width: 54px;
-        font-size: 27px;
+        width: 50px;
+        font-size: 25px;
       }
 
       .waste-token small {
@@ -709,23 +716,31 @@
         font-size: 10px;
       }
 
+      .cm-kicker,
+      .cm-label {
+        font-size: clamp(13px, 3.7vw, 16px);
+        line-height: 1.42;
+      }
+
       .cm-title {
-        font-size: clamp(28px, 8vw, 42px);
-        line-height: 1.08;
+        font-size: clamp(26px, 7.4vw, 38px);
+        line-height: 1.14;
       }
 
       .cm-copy {
-        font-size: clamp(15px, 4.3vw, 19px);
+        font-size: clamp(14px, 4vw, 18px);
+        line-height: 1.5;
       }
 
       .cm-problem-list {
         gap: 9px;
         margin-top: 14px;
+        justify-items: center;
       }
 
       .problem-pill {
-        padding: 8px 13px;
-        font-size: 13px;
+        padding: 8px 12px;
+        font-size: 12px;
       }
 
       .pantry-brand {
@@ -733,33 +748,59 @@
       }
 
       .pantry-logo {
-        width: min(78%, 270px);
+        width: min(72%, 250px);
         margin-inline: auto;
       }
 
-      .cm-problem-list {
-        justify-items: center;
+      .cm-characters {
+        width: 100%;
+      }
+
+      .cm-characters .cm-title {
+        font-size: clamp(28px, 8.4vw, 42px);
+        line-height: 1.12;
+        max-width: 9em;
+        margin-inline: auto;
       }
 
       .character-line {
-        flex-wrap: wrap;
-        align-content: center;
-        min-height: 350px;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        align-items: end;
+        justify-items: center;
+        gap: 12px 6px;
+        min-height: auto;
+        margin-top: 28px;
       }
 
-      .cm-character {
-        width: 92px;
+      .character-line .cm-character {
+        width: min(27vw, 94px);
+        max-width: 94px;
+        display: grid;
+        justify-items: center;
+      }
+
+      .character-line .cm-character strong {
+        position: static;
+        transform: none;
+        width: max-content;
+        max-width: 108px;
+        margin-top: 4px;
+        padding: 4px 8px;
+        font-size: 11px;
+        line-height: 1.15;
       }
 
       .mission-map {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
-        margin-top: 18px;
+        width: 100%;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 9px;
+        margin-top: 16px;
       }
 
       .mission-card {
         min-height: auto;
-        padding: 9px;
+        padding: 10px 8px;
         text-align: center;
       }
 
@@ -773,21 +814,104 @@
         line-height: 1.36;
       }
 
+      .unite-scene .cm-title {
+        font-size: clamp(28px, 8vw, 38px);
+        max-width: 10em;
+        margin-inline: auto;
+      }
+
       .ring-team {
-        width: min(92vw, 410px);
+        width: min(82vw, 330px);
+        margin-top: 18px;
+      }
+
+      .ring-team .cm-character {
+        width: clamp(54px, 17vw, 72px);
+      }
+
+      .ring-team .c1 { top: -3%; }
+      .ring-team .c2 { right: 0; top: 25%; }
+      .ring-team .c3 { right: 12%; bottom: 1%; }
+      .ring-team .c4 { left: 12%; bottom: 1%; }
+      .ring-team .c5 { left: 0; top: 25%; }
+      .ring-team .c6 { top: 38%; width: clamp(60px, 19vw, 80px); }
+
+      .future-seed {
+        width: clamp(66px, 20vw, 92px);
+        border-width: 6px;
       }
 
       .phone-stack {
-        min-height: 190px;
+        min-height: 210px;
       }
 
       .phone-shot {
-        width: clamp(92px, 26vw, 126px);
+        width: clamp(88px, 27vw, 124px);
         padding: 6px;
+        border-radius: 16px;
       }
+
+      .phone-shot-1 { left: 2%; top: 42px; }
+      .phone-shot-2 { left: 50%; top: 0; transform: translateX(-50%) rotate(4deg); }
+      .phone-shot-3 { right: 2%; top: 42px; }
 
       .cm-button-row {
         justify-content: center;
+      }
+
+      .cm-cta {
+        width: 100%;
+        min-height: 44px;
+        padding: 10px 14px;
+        font-size: 14px;
+      }
+
+      .cm-controls {
+        padding: 16px;
+      }
+
+      .cm-controls h1 {
+        font-size: 22px;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .cm-stage {
+        min-height: 640px;
+      }
+
+      .cm-scene {
+        padding: 22px 12px 26px;
+      }
+
+      .cm-characters .cm-title {
+        font-size: clamp(26px, 8vw, 34px);
+      }
+
+      .character-line {
+        gap: 10px 4px;
+      }
+
+      .character-line .cm-character {
+        width: min(26vw, 82px);
+      }
+
+      .character-line .cm-character strong {
+        max-width: 96px;
+        padding-inline: 7px;
+        font-size: 10px;
+      }
+
+      .mission-card h3 {
+        font-size: 14px;
+      }
+
+      .mission-card p {
+        font-size: 10px;
+      }
+
+      .ring-team {
+        width: min(78vw, 300px);
       }
     }
 
